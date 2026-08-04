@@ -1,0 +1,8 @@
+/vendor/
+/composer.lock
+/.phpunit.cache/
+/storage/phpstan/
+/workbench/storage/
+.idea/
+.phpstorm.meta.php
+_ide_*.php

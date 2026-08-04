@@ -1,0 +1,4 @@
+{
+    "name": "acme/broken-app",
+    "require": {
+        "laravel/framework": "not valid json

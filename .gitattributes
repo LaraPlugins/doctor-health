@@ -1,0 +1,9 @@
+/vendor/ export-ignore
+/tests/ export-ignore
+/workbench/ export-ignore
+/.github/ export-ignore
+/phpunit.xml export-ignore
+/pint.json export-ignore
+/phpstan.neon export-ignore
+/testbench.yaml export-ignore
+/.gitignore export-ignore
