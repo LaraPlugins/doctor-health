@@ -34,7 +34,9 @@ class PackageHealth extends Diagnostic
     public function __construct(
         protected Application $app,
         protected Http $http,
-    ) {}
+    ) {
+        parent::__construct();
+    }
 
     /**
      * Get the diagnostic's named message definitions.

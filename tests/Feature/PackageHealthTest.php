@@ -36,6 +36,13 @@ beforeEach(function () {
     $this->useComposerFixture();
 });
 
+it('initializes the diagnostic name and group', function () {
+    $diagnostic = resolveHealthDiagnostic();
+
+    expect($diagnostic->name)->toBe('Package health')
+        ->and($diagnostic->group)->toBe('laraplugins');
+});
+
 it('passes when all indexed dependencies are healthy', function () {
     Http::fake([
         'laraplugins.io/api/v1/packages/health' => Http::response(healthApiPayload([
