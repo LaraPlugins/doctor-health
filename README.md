@@ -41,14 +41,13 @@ php artisan vendor:publish --tag=doctor-health-config
 When the diagnostic runs, the following is sent to `https://laraplugins.io/api/v1/packages/health`:
 
 - The **names and installed versions** of every package in your `composer.json`
-  `require` and `require-dev` sections (platform packages such as `php`,
-  `ext-*`, and `lib-*` are never sent).
+  `require` and `require-dev` sections.
 - No source code, configuration values, environment variables, or other
   project data.
 
 LaraPlugins logs the received package names for ecosystem analytics and to
 discover packages that are not yet indexed. It does not store IP addresses —
-they are salted-hashed for abuse protection only.
+they are salted-hashed for abuse protection only (rate limiting).
 
 If your project is air-gapped or you prefer not to send dependency data,
 disable the diagnostic entirely:
@@ -63,6 +62,7 @@ or exclude individual packages:
 ```php
 'exclude_packages' => ['laraplugins/doctor-health', 'vendor/private'],
 ```
+Also, we have a daily exported JSONL format available. If there is any interest from sponsors, we may enable the use of that data in the future so that no data gets out. Please hit me up if your installation needs that. For now, it is not on my roadmap.. 
 
 ## Configuration
 
