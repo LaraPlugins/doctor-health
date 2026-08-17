@@ -1,8 +1,12 @@
 # LaraPlugins Doctor Health
 
+[![LaraPlugins.io: laraplugins/doctor-health info card](https://laraplugins.io/api/infocard/laraplugins/doctor-health?design=badge&theme=dark)](https://laraplugins.io/plugins/laraplugins/doctor-health)
+
 A [Laravel Doctor](https://github.com/laravel/doctor) diagnostic that checks your
 application's composer dependencies against the [LaraPlugins](https://laraplugins.io)
 health index and reports the verdict for every indexed package.
+
+[![LaraPlugins.io: laraplugins/doctor-health info card](https://laraplugins.io/api/infocard/laraplugins/doctor-health?design=facts&theme=dark)](https://laraplugins.io/plugins/laraplugins/doctor-health)
 
 When you run `php artisan doctor`, a single `laraplugins` diagnostic is added:
 
@@ -104,3 +108,5 @@ composer build         # rebuild the workbench app
 ## License
 
 MIT
+
+[![LaraPlugins.io: laraplugins/doctor-health info card](https://laraplugins.io/api/infocard/laraplugins/doctor-health?design=simple&theme=dark)](https://laraplugins.io/plugins/laraplugins/doctor-health)
