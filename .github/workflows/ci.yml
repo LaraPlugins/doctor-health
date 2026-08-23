@@ -8,25 +8,17 @@ on:
 
 jobs:
   test:
-    name: Test (${{ matrix.php }}/${{ matrix.laravel }})
+    name: Test (PHP ${{ matrix.php }})
     runs-on: ubuntu-latest
 
     strategy:
       fail-fast: false
       matrix:
         php: ['8.3', '8.4']
-        laravel: ['^12.0', '^13.0']
-        include:
-          - php: '8.4'
-            laravel: '^13.0'
-            stability: high
-
-    env:
-      LARAVEL_DEPENDENCY_VERSION: ${{ matrix.laravel }}
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -37,9 +29,9 @@ jobs:
 
       - name: Install dependencies
         run: |
-          composer config minimum-stability ${{ matrix.stability || 'stable' }}
-          composer config prefer-stable true
-          composer require "illuminate/contracts:${LARAVEL_DEPENDENCY_VERSION}" "illuminate/http:${LARAVEL_DEPENDENCY_VERSION}" "illuminate/support:${LARAVEL_DEPENDENCY_VERSION}" "laravel/doctor:${LARAVEL_DEPENDENCY_VERSION}" --no-interaction --no-progress --no-update
+          composer config minimum-stability dev
+          composer config prefer-stable false
+          composer require laravel/doctor:dev-main --no-interaction --no-progress
           composer install --no-interaction --no-progress
 
       - name: Run tests
