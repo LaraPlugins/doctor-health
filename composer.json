@@ -5,7 +5,10 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "LaraPlugins"
+            "name": "Daniel Petrica",
+            "email": "oportunities@danielpetrica.com",
+            "homepage": "https://danielpetrica.com",
+            "role": "maintainer"
         }
     ],
     "require": {
@@ -41,6 +44,10 @@
             ]
         }
     },
+    "support": {
+        "issues": "https://github.com/LaraPlugins/doctor-health/issues"
+    },
+
     "config": {
         "allow-plugins": {
             "pestphp/pest-plugin": true

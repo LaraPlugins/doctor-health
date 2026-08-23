@@ -66,13 +66,13 @@ or exclude individual packages:
 ```php
 'exclude_packages' => ['laraplugins/doctor-health', 'vendor/private'],
 ```
-Also, we have a daily exported JSONL format available. If there is any interest from sponsors, we may enable the use of that data in the future so that no data gets out. Please hit me up if your installation needs that. For now, it is not on my roadmap.. 
+> **💡 Sponsorship opportunity:** A daily exported JSONL format of the health index is available for sponsors. If your infrastructure requires a private, air-gapped copy of the data — or if you'd simply like to support the project — reach out via [GitHub Discussions](https://github.com/LaraPlugins/doctor-health/discussions).
 
 ## Configuration
 
 | Key | Default | Description |
 |---|---|---|
-| `url` | `https://laraplugins.io` | Base URL of the health-check API (`LARAPLUGINS_DOCTOR_URL`) |
+| `url` | `https://laraplugins.io/api` | Base URL of the health-check API (`LARAPLUGINS_DOCTOR_URL`) |
 | `timeout` | `5` | Total HTTP timeout in seconds |
 | `connect_timeout` | `5` | Connection timeout in seconds |
 | `retry.times` / `retry.sleep` | `2` / `100` | HTTP retry attempts and delay in ms |
