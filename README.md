@@ -6,6 +6,8 @@ A [Laravel Doctor](https://github.com/laravel/doctor) diagnostic that checks you
 application's composer dependencies against the [LaraPlugins](https://laraplugins.io)
 health index and reports the verdict for every indexed package.
 
+> **Sponsor:** LaraPlugins is independent and ad-free. [Sponsor the project on GitHub](https://github.com/sponsors/LaraPlugins) to keep the health data open and the API running.
+
 [![LaraPlugins.io: laraplugins/doctor-health info card](https://laraplugins.io/api/infocard/laraplugins/doctor-health?design=facts&theme=dark)](https://laraplugins.io/plugins/laraplugins/doctor-health)
 
 When you run `php artisan doctor`, a single `laraplugins` diagnostic is added:
